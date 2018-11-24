@@ -1,22 +1,26 @@
 
-SciPy - Constants
+## SciPy - Constants
 
 
 
 SciPy constants package provides a wide range of constants, which are used in the general scientific area.
-SciPy Constants Package
+
+#### 1. SciPy Constants Package
 The scipy.constants package provides various constants. We have to import the required constant and use them as per the requirement. Let us see how these constant variables are imported and used.
 To start with, let us compare the ‘pi’ value by considering the following example.
+<pre><code>
 #Import pi constant from both the packages
 from scipy.constants import pi
 from math import pi
 
 print("sciPy - pi = %.16f"%scipy.constants.pi)
 print("math - pi = %.16f"%math.pi)
+<code></pre>
 The above program will generate the following output.
 sciPy - pi = 3.1415926535897931
 math - pi = 3.1415926535897931
-List of Constants Available
+
+#### List of Constants Available
 The following tables describe in brief the various constants.
 Mathematical Constants
 
@@ -142,7 +146,8 @@ dyn
 One dyne in newtons
 18
 lambda2nu
-Convert wavelength to optical frequency
+
+#### Convert wavelength to optical frequency
 Remembering all of these are a bit tough. The easy way to get which key is for which function is with the scipy.constants.find() method. Let us consider the following example.
 import scipy.constants
 res = scipy.constants.physical_constants["alpha particle mass"]
