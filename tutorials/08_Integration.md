@@ -59,18 +59,25 @@ x
 2
 f(x)=e−x2
 , this can be done using a lambda expression and then call the quad method on that function.
+
+<pre><code>
 import scipy.integrate
 from numpy import exp
 f= lambda x:exp(-x**2)
 i = scipy.integrate.quad(f, 0, 1)
-print i
+print(i)
+</code></pre>
+
 The above program will generate the following output.
 (0.7468241328124271, 8.291413475940725e-15)
+
 The quad function returns the two values, in which the first number is the value of integral and the second value is the estimate of the absolute error in the value of integral.
 Note − Since quad requires the function as the first argument, we cannot directly pass exp as the argument. The Quad function accepts positive and negative infinity as limits. The Quad function can integrate standard predefined NumPy functions of a single variable, such as exp, sin and cos.
-Multiple Integrals
+
+#### Multiple Integrals
 The mechanics for double and triple integration have been wrapped up into the functions dblquad, tplquad and nquad. These functions integrate four or six arguments, respectively. The limits of all inner integrals need to be defined as functions.
-Double Integrals
+
+#### Double Integrals
 The general form of dblquad is scipy.integrate.dblquad(func, a, b, gfun, hfun). Where, func is the name of the function to be integrated, ‘a’ and ‘b’ are the lower and upper limits of the x variable, respectively, while gfun and hfun are the names of the functions that define the lower and upper limits of the y variable.
 As an example, let us perform the double integral method.
 ∫
@@ -87,6 +94,7 @@ y
 16xydx
 ∫01/2dy∫01−4y216xydx
 We define the functions f, g, and h, using the lambda expressions. Note that even if g and h are constants, as they may be in many cases, they must be defined as functions, as we have done here for the lower limit.
+<pre><code>
 import scipy.integrate
 from numpy import exp
 from math import sqrt
@@ -95,7 +103,11 @@ g = lambda x : 0
 h = lambda y : sqrt(1-4*y**2)
 i = scipy.integrate.dblquad(f, 0, 0.5, g, h)
 print i
+</code></pre>
+
 The above program will generate the following output.
+
 (0.5, 1.7092350012594845e-14)
+
 In addition to the routines described above, scipy.integrate has a number of other integration routines, including nquad, which performs n-fold multiple integration, as well as other routines that implement various integration algorithms. However, quad and dblquad will meet most of our needs for numerical integration.
 
