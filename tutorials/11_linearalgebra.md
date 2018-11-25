@@ -3,9 +3,11 @@ SciPy - Linalg
 
 
 SciPy is built using the optimized ATLAS LAPACK and BLAS libraries. It has very fast linear algebra capabilities. All of these linear algebra routines expect an object that can be converted into a two-dimensional array. The output of these routines is also a two-dimensional array.
-SciPy.linalg vs NumPy.linalg
+
+#### SciPy.linalg vs NumPy.linalg
 A scipy.linalg contains all the functions that are in numpy.linalg. Additionally, scipy.linalg also has some other advanced functions that are not in numpy.linalg. Another advantage of using scipy.linalg over numpy.linalg is that it is always compiled with BLAS/LAPACK support, while for NumPy this is optional. Therefore, the SciPy version might be faster depending on how NumPy was installed.
-Linear Equations
+
+#### Linear Equations
 The scipy.linalg.solve feature solves the linear equation a * x + b * y = Z, for the unknown x, y values.
 As an example, assume that it is desired to solve the following simultaneous equations.
 x + 3y + 5z = 10
@@ -75,6 +77,7 @@ z
 However, it is better to use the linalg.solve command, which can be faster and more numerically stable.
 The solve function takes two inputs ‘a’ and ‘b’ in which ‘a’ represents the coefficients and ‘b’ represents the respective right hand side value and returns the solution array.
 Let us consider the following example.
+<pre><code>
 #importing the scipy and numpy packages
 from scipy import linalg
 import numpy as np
@@ -88,9 +91,11 @@ x = linalg.solve(a, b)
 
 #printing the result array
 print x
+</code></pre>
 The above program will generate the following output.
 array([ 2., -2., 9.])
-Finding a Determinant
+
+#### Finding a Determinant
 The determinant of a square matrix A is often denoted as |A| and is a quantity often used in linear algebra. In SciPy, this is computed using the det() function. It takes a matrix as input and returns a scalar value.
 Let us consider the following example.
 #importing the scipy and numpy packages
@@ -107,10 +112,12 @@ x = linalg.det(A)
 print x
 The above program will generate the following output.
 -2.0
-Eigenvalues and Eigenvectors
+
+#### Eigenvalues and Eigenvectors
 The eigenvalue-eigenvector problem is one of the most commonly employed linear algebra operations. We can find the Eigen values (λ) and the corresponding Eigen vectors (v) of a square matrix (A) by considering the following relation −
 Av = λv
 scipy.linalg.eig computes the eigenvalues from an ordinary or generalized eigenvalue problem. This function returns the Eigen values and the Eigen vectors.
+
 Let us consider the following example.
 #importing the scipy and numpy packages
 from scipy import linalg
