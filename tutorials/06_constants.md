@@ -111,29 +111,19 @@ One day in seconds
 6
 inch
 One inch in meters
-7
-micron
-One micron in meters
-8
-light_year
-One light-year in meters
-9
-atm
+7 micron: One micron in meters
+8 light_year: One light-year in meters
+9 atm
 Standard atmosphere in pascals
 10
-acre
-One acre in square meters
+acre: One acre in square meters
 11
-liter
-One liter in cubic meters
-12
-gallon
-One gallon in cubic meters
+liter: One liter in cubic meters
+12 gallon: One gallon in cubic meters
 13
 kmh
 Kilometers per hour in meters per seconds
-14
-degree_Fahrenheit
+14: degree_Fahrenheit
 One Fahrenheit in kelvins
 15
 eV
@@ -142,17 +132,21 @@ One electron volt in joules
 hp
 One horsepower in watts
 17
-dyn
-One dyne in newtons
-18
-lambda2nu
+dyn: One dyne in newtons
+18:  lambda2nu
 
 #### Convert wavelength to optical frequency
+
 Remembering all of these are a bit tough. The easy way to get which key is for which function is with the scipy.constants.find() method. Let us consider the following example.
+<pre><code>
 import scipy.constants
 res = scipy.constants.physical_constants["alpha particle mass"]
 print res
+</code></pre>
+
+
 The above program will generate the following output.
+<pre><code>
 [
    'alpha particle mass',
    'alpha particle mass energy equivalent',
@@ -160,5 +154,7 @@ The above program will generate the following output.
    'alpha particle mass in u',
    'electron to alpha particle mass ratio'
 ]
+</code></pre>
+
 This method returns the list of keys, else nothing if the keyword does not match.
 
