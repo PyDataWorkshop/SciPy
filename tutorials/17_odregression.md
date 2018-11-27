@@ -1,5 +1,5 @@
 
-SciPy - ODR
+## SciPy - ODR
 
 
 ODR stands for Orthogonal Distance Regression, which is used in the regression studies. Basic linear regression is often used to estimate the relationship between the two variables y and x by drawing the line of best fit on the graph.
@@ -8,9 +8,10 @@ In a standard linear regression, the aim is to predict the Y value from the X va
 For example − When you know your measurements of X are uncertain, or when you do not want to focus on the errors of one variable over another.
  
 Orthogonal Distance Regression (ODR) is a method that can do this (orthogonal in this context means perpendicular – so it calculates errors perpendicular to the line, rather than just ‘vertically’).
-scipy.odr Implementation for Univariate Regression
-The following example demonstrates scipy.odr implementation for univariate regression.
 
+### scipy.odr Implementation for Univariate Regression
+The following example demonstrates scipy.odr implementation for univariate regression.
+<pre><code>
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.odr import *
@@ -39,7 +40,9 @@ out = odr.run()
 
 # Use the in-built pprint method to give us results.
 out.pprint()
+</code></pre>
 The above program will generate the following output.
+<pre><code>
 Beta: [ 5.51846098 -4.25744878]
 Beta Std Error: [ 0.7786442 2.33126407]
 
@@ -52,6 +55,7 @@ Residual Variance: 0.313892697582
 Inverse Condition #: 0.146618499389
 Reason(s) for Halting:
    Sum of squares convergence
+ </code></pre>
 
 
 
