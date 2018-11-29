@@ -64,36 +64,17 @@ array([ 0. , 0. , 0.25, 0.5 , 0.75, 1. ])
 The basic stats such as Min, Max, Mean and Variance takes the NumPy array as input and returns the respective results. A few basic statistical functions available in the scipy.stats package are described in the following table.
 Sr. No.
 Function & Description
-1
-describe()
-Computes several descriptive statistics of the passed array
-2
-gmean()
-Computes geometric mean along the specified axis
-3
-hmean()
-Calculates the harmonic mean along the specified axis
-4
-kurtosis()
-Computes the kurtosis
-5
-mode()
-Returns the modal value
-6
-skew()
-Tests the skewness of the data
-7
-f_oneway()
-Performs a 1-way ANOVA
-8
-iqr()
-Computes the interquartile range of the data along the specified axis
-9
-zscore()
-Calculates the z score of each value in the sample, relative to the sample mean and standard deviation
-10
-sem()
-Calculates the standard error of the mean (or standard error of measurement) of the values in the input array
+1. ``describe()``: Computes several descriptive statistics of the passed array
+2. ``gmean()``: Computes geometric mean along the specified axis
+3. ``hmean()``: Calculates the harmonic mean along the specified axis
+4. ``kurtosis()``: Computes the kurtosis
+5. ``mode()``: Returns the modal value
+6. ``skew()``: Tests the skewness of the data
+7. ``_oneway()``: Performs a 1-way ANOVA
+8. ``iqr()``: Computes the interquartile range of the data along the specified axis
+9. ``zscore()``: Calculates the z score of each value in the sample, relative to the sample mean and standard deviation
+10. ``sem()``: Calculates the standard error of the mean (or standard error of measurement) of the values in the input array
+
 Several of these functions have a similar version in the scipy.stats.mstats, which work for masked arrays. Let us understand this with the example given below.
 <pre><code>
 from scipy import stats
