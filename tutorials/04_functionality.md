@@ -16,34 +16,55 @@ arr = np.array(list)
 print arr
 </code></pre>
 The output of the above program will be as follows.
+<pre><code>
 [1 2 3 4]
-Intrinsic NumPy Array Creation
+</code></pre>
+
+#### Intrinsic NumPy Array Creation
 NumPy has built-in functions for creating arrays from scratch. Some of these functions are explained below.
-Using zeros()
+
+#### Using zeros()
 The zeros(shape) function will create an array filled with 0 values with the specified shape. The default dtype is float64. Let us consider the following example.
+
 <pre><code>
 import numpy as np
 print np.zeros((2, 3))
 </code></pre>
+
 The output of the above program will be as follows.
+<pre><code>
 array([[ 0., 0., 0.],
 [ 0., 0., 0.]])
-Using ones()
+</code></pre>
+
+#### Using ones()
 The ones(shape) function will create an array filled with 1 values. It is identical to zeros in all the other respects. Let us consider the following example.
 <pre><code>
 import numpy as np
 print np.ones((2, 3))
 </code></pre>
+
 The output of the above program will be as follows.
+<pre><code>
 array([[ 1., 1., 1.],
 [ 1., 1., 1.]])
-Using arange()
+</code></pre>
+
+#### Using arange()
+
 The arange() function will create arrays with regularly incrementing values. Let us consider the following example.
+<pre><code>
 import numpy as np
 print np.arange(7)
+</code></pre>
+
 The above program will generate the following output.
+<pre><code>
 array([0, 1, 2, 3, 4, 5, 6])
-Defining the data type of the values
+</code></pre>
+
+#### Defining the data type of the values
+
 Let us consider the following example.
 <pre><code>
 import numpy as np
@@ -100,8 +121,10 @@ mat = np.matrix('1 2; 3 4')
 mat.T
 </code></pre>
 The above program will generate the following output.
+<pre><code>
 matrix([[1, 3],
         [2, 4]])
+</code></pre>
 When we transpose a matrix, we make a new matrix whose rows are the columns of the original. A conjugate transposition, on the other hand, interchanges the row and the column index for each matrix element. The inverse of a matrix is a matrix that, if multiplied with the original matrix, results in an identity matrix.
 
 
