@@ -1,12 +1,13 @@
-
-SciPy - Optimize
+## SciPy - Optimize
 
 The scipy.optimize package provides several commonly used optimization algorithms. This module contains the following aspects −
-Unconstrained and constrained minimization of multivariate scalar functions (minimize()) using a variety of algorithms (e.g. BFGS, Nelder-Mead simplex, Newton Conjugate Gradient, COBYLA or SLSQP)
-Global (brute-force) optimization routines (e.g., anneal(), basinhopping())
-Least-squares minimization (leastsq()) and curve fitting (curve_fit()) algorithms
-Scalar univariate functions minimizers (minimize_scalar()) and root finders (newton())
-Multivariate equation system solvers (root()) using a variety of algorithms (e.g. hybrid Powell, Levenberg-Marquardt or large-scale methods such as Newton-Krylov)
+
+* Unconstrained and constrained minimization of multivariate scalar functions (``minimize()``) using a variety of algorithms (e.g. BFGS, Nelder-Mead simplex, Newton Conjugate Gradient, COBYLA or SLSQP)
+* Global (brute-force) optimization routines (e.g., ``anneal()``, ``basinhopping()``)
+* Least-squares minimization (``leastsq()``) and curve fitting (``curve_fit()``) algorithms
+* Scalar univariate functions minimizers (``minimize_scalar()``) and root finders (``newton()``)
+* Multivariate equation system solvers (``root()``) using a variety of algorithms (e.g. hybrid Powell, Levenberg-Marquardt or large-scale methods such as Newton-Krylov)
+
 
 #### Unconstrained & Constrained minimization of multivariate scalar functions
 The minimize() function provides a common interface to unconstrained and constrained minimization algorithms for multivariate scalar functions in scipy.optimize. To demonstrate the minimization function, consider the problem of minimizing the Rosenbrock function of the NN variables −
