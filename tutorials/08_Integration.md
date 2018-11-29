@@ -4,46 +4,22 @@ SciPy - Integrate
 When a function cannot be integrated analytically, or is very difficult to integrate analytically, one generally turns to numerical integration methods. SciPy has a number of routines for performing numerical integration. Most of them are found in the same scipy.integrate library. The following table lists some commonly used functions.
 Sr No.
 Function & Description
-1
-quad
-Single integration
-2
-dblquad
-Double integration
-3
-tplquad
-Triple integration
-4
-nquad
-n-fold multiple integration
-5
-fixed_quad
-Gaussian quadrature, order n
-6
-quadrature
-Gaussian quadrature to tolerance
-7
-romberg
-Romberg integration
-8
-trapz
-Trapezoidal rule
-9
-cumtrapz
-Trapezoidal rule to cumulatively compute integral
-10
-simps
-Simpson’s rule
-11
-romb
-Romberg integration
-12
-polyint
-Analytical polynomial integration (NumPy)
-13
-poly1d
-Helper function for polyint (NumPy)
-Single Integrals
+
+1. ``quad``: Single integration
+2. ``dblquad``: Double integration
+3. ``tplquad``: Triple integration
+4. ``nquad``: n-fold multiple integration
+5. ``fixed_quad``: Gaussian quadrature, order n
+6. ``quadrature``: Gaussian quadrature to tolerance
+7. ``romberg``: Romberg integration
+8. ``trapz``: Trapezoidal rule
+9. ``cumtrapz``: Trapezoidal rule to cumulatively compute integral
+10. ``simps``: Simpson’s rule
+11. ``romb``: Romberg integration
+12. ``polyint``: Analytical polynomial integration (NumPy)
+13. ``poly1d``: Helper function for polyint (NumPy)
+
+##### Single Integrals
 The Quad function is the workhorse of SciPy’s integration functions. Numerical integration is sometimes called quadrature, hence the name. It is normally the default choice for performing single integrals of a function f(x) over a given fixed range from a to b.
 ∫
 b
@@ -69,9 +45,12 @@ print(i)
 </code></pre>
 
 The above program will generate the following output.
+<pre><code>
 (0.7468241328124271, 8.291413475940725e-15)
+</code></pre>
 
 The quad function returns the two values, in which the first number is the value of integral and the second value is the estimate of the absolute error in the value of integral.
+
 Note − Since quad requires the function as the first argument, we cannot directly pass exp as the argument. The Quad function accepts positive and negative infinity as limits. The Quad function can integrate standard predefined NumPy functions of a single variable, such as exp, sin and cos.
 
 #### Multiple Integrals
