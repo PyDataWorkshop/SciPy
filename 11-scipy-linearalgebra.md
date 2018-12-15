@@ -142,16 +142,14 @@ print(x)
     -2.0
 
 
-
-```python
 #### Eigenvalues and Eigenvectors
 The eigenvalue-eigenvector problem is one of the most commonly employed linear algebra operations. We can find the Eigen values (λ) and the corresponding Eigen vectors (v) of a square matrix (A) by considering the following relation −
-Av = λv
-scipy.linalg.eig computes the eigenvalues from an ordinary or generalized eigenvalue problem. This function returns the Eigen values and the Eigen vectors.
+$$Av = λv$$
+
+``scipy.linalg.eig`` computes the eigenvalues from an ordinary or generalized eigenvalue problem. This function returns the Eigen values and the Eigen vectors.
 
 Let us consider the following example.
 
-```
 
 
 ```python
@@ -192,12 +190,13 @@ array([[-0.82456484, -0.41597356], #--Eigen Vectors
 
 #### Singular Value Decomposition
 A Singular Value Decomposition (SVD) can be thought of as an extension of the eigenvalue problem to matrices that are not square.
+
 The scipy.linalg.svd factorizes the matrix ‘a’ into two unitary matrices ‘U’ and ‘Vh’ and a 1-D array ‘s’ of singular values (real, non-negative) such that a == U*S*Vh, where ‘S’ is a suitably shaped matrix of zeros with the main diagonal ‘s’.
+
 Let us consider the following example.
 
 
 ```python
-
 #importing the scipy and numpy packages
 from scipy import linalg
 import numpy as np
@@ -207,9 +206,22 @@ a = np.random.randn(3, 2) + 1.j*np.random.randn(3, 2)
 
 #Passing the values to the eig function
 U, s, Vh = linalg.svd(a)
+```
 
+
+```python
 # printing the result
-print(U, Vh, s)
+print(U)
+
+```
+
+
+```python
+# printing the result
+print(Vh)
+
+
+
 
 ```
 
@@ -218,3 +230,10 @@ print(U, Vh, s)
      [ 0.14530431-0.66458216j -0.34767678+0.35182024j  0.53918131-0.04294304j]] [[-0.67556375+0.j          0.73585306-0.04619409j]
      [-0.73730158+0.j         -0.67423652+0.04232604j]] [2.22450039 1.12640672]
 
+
+
+```python
+# printing the result
+print(s)
+
+```
